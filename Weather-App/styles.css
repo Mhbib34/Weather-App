@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+i {
+  color: white;
+}
+
+.card button {
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.card .search-input {
+  border: 2px solid black;
+  padding: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 25px;
+  width: 90%;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.cards-container {
+  background-color: rgb(255, 255, 255, 0.1);
+  height: 70vh;
+  width: 50vh;
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  background: transparent;
+}
+
+.input input {
+  border: none;
+  padding: 7px;
+  width: 100%;
+  font-size: 17px;
+  background: transparent;
+  color: white;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.cloud-info img {
+  width: 60%;
+}
+
+.cloud-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.cloud-info .temperature {
+  font-size: 60px;
+  position: relative;
+  font-weight: 700;
+  line-height: 1;
+  margin: 20px 0 6px -30px;
+}
+
+.cloud-info .temperature span {
+  position: absolute;
+  font-size: 24px;
+}
+
+.cloud-info .description {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+
+.weather-detail {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.weather-detail .humidity,
+.weather-detail .wind {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.weather-detail i {
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.weather-detail span {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.weather-detail p {
+  font-weight: 200;
+}
