@@ -28,22 +28,34 @@ i {
   font-size: 25px;
   cursor: pointer;
 }
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  padding: 7px;
+  font-size: 17px;
+  background: transparent;
+  color: white;
+}
 
 .card .search-input {
-  border: 2px solid black;
   padding: 5px;
-  padding-left: 7px;
-  padding-right: 7px;
   border-radius: 10px;
-  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   font-size: 25px;
-  width: 90%;
   background: transparent;
   border: 1px solid rgb(255, 255, 255, 0.1);
+  width: 45vh;
 }
 
 .cards-container {
@@ -58,24 +70,6 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 0.5rem;
-  background: transparent;
-}
-
-.input input {
-  border: none;
-  padding: 7px;
-  width: 100%;
-  font-size: 17px;
-  background: transparent;
-  color: white;
 }
 
 .input input:focus {
@@ -101,6 +95,7 @@ i {
   align-items: center;
   flex-direction: column;
   color: white;
+  margin-top: 40px;
 }
 
 .cloud-info .temperature {
@@ -127,7 +122,7 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 45vh;
 }
 
 .weather-detail .humidity,
@@ -149,4 +144,50 @@ i {
 
 .weather-detail p {
   font-weight: 200;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.not-found-pic {
+  width: 100%;
+  margin-top: 60px;
+}
+/* Animasi untuk cloud-info (kiri ke kanan) */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi untuk weather-detail (atas ke bawah) */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tambahkan kelas animasi */
+.cloud-info.animate {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.weather-detail.animate {
+  animation: slideInFromTop 0.8s ease-out;
 }
