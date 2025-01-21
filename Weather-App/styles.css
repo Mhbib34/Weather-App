@@ -60,7 +60,6 @@ i {
 
 .cards-container {
   background-color: rgb(255, 255, 255, 0.1);
-  height: 70vh;
   width: 50vh;
   backdrop-filter: blur(30px);
   border-radius: 10px;
@@ -96,6 +95,7 @@ i {
   flex-direction: column;
   color: white;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .cloud-info .temperature {
@@ -182,6 +182,22 @@ i {
     transform: translateY(0);
   }
 }
+@keyframes expandHeight {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 70vh; /* Sesuaikan tinggi maksimum sesuai kebutuhan */
+    opacity: 1;
+  }
+}
+
+/* Kelas untuk mengaktifkan animasi */
+.cards-container.animate-expand {
+  animation: expandHeight 0.8s ease-out;
+  overflow: hidden;
+}
 
 /* Tambahkan kelas animasi */
 .cloud-info.animate {
@@ -189,5 +205,9 @@ i {
 }
 
 .weather-detail.animate {
+  animation: slideInFromTop 0.8s ease-out;
+}
+
+.not-found-pic .animate {
   animation: slideInFromTop 0.8s ease-out;
 }
